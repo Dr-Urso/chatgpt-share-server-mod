@@ -22,7 +22,7 @@ services:
     volumes:
       - ./data/redis/:/data/
   chatgpt-share-server:
-    image: xyhelper/chatgpt-share-server:latest
+    image: drkuma/chatgpt-share-server:latest
     restart: always
     ports:
       - 8300:8001
