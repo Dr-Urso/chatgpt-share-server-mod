@@ -346,6 +346,18 @@
       </main>
     </div>
     <script id="client-scripts" type="text/javascript">
+
+  window.addEventListener("load", function () {
+
+  const btn1 = document.getElementsByName("action")[0];
+  const txt1 = document.getElementsByName("usertoken")[0];
+  btn1.addEventListener("click", function () {
+  localStorage.setItem("savedToken",txt1.value);
+  })
+
+  const text = document.getElementsByName("usertoken")[0];
+  text.value = localStorage.getItem("savedToken");});
+
       !(function () {
         var t,
           e,
