@@ -6,7 +6,7 @@ echo "clone repository..."
 git clone -b deploy  --depth=1 https://github.com/Dr-Urso/chatgpt-share-server-mod.git chatgpt-share-mod
  
 ## 进入目录
-cd chatgpt-share
+cd chatgpt-share-mod
  
 docker compose pull
 docker compose up -d --remove-orphans
