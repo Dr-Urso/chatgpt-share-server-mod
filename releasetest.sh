@@ -12,12 +12,7 @@ fi
 
 cd backend
 gf build main.go -a amd64 -s linux -p ./temp
-gf docker main.go -p -t drkuma/chatgpt-share-server:latest
+gf docker main.go -t drkuma/chatgpt-share-server:test
 now=$(date +"%Y%m%d%H%M%S")
 # 以当前时间为版本号
-docker tag drkuma/chatgpt-share-server:latest drkuma/chatgpt-share-server:$now
-docker push drkuma/chatgpt-share-server:$now
-echo "release success" $now
-# 写入发布日志 release.log
-echo $now >> release.log
-sleep 10s
+#docker push drkuma/chatgpt-share-server:test
